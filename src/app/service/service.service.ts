@@ -17,4 +17,15 @@ export class ServiceService {
                   }));
   }
 
+  getPeoples(){
+    return this.http.get('https://swapi.co/api/people');
+  }
+
+  getPeople(id: string){
+    return this.http.get(`https://swapi.co/api/people/${id}`);
+  }
+
+  getDirection(url: string){
+    return this.http.get(url);
+  }
 }
