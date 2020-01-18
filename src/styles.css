@@ -2,7 +2,18 @@
 
 body {
     background-color: white;
-    color: white !important;
+}
+
+h1#Cardspeciestitle {
+    color: black;
+}
+
+#carouselExampleIndicators {
+    margin-top: 50px;
+}
+
+#Cardspecies {
+    margin-top: 15px;
 }
 
 hr {

@@ -28,4 +28,12 @@ export class ServiceService {
   getDirection(url: string){
     return this.http.get(url);
   }
+
+  getSpecies(){
+    return this.http.get('https://swapi.co/api/species')
+    .pipe( map( data => {
+      return data['results'];
+    }));
+  }
+
 }

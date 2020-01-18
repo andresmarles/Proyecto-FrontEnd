@@ -1,0 +1,28 @@
+<h1 id="Cardspeciestitle">Stars Wars <small>Especies</small> </h1>
+<hr>
+
+<div id="Cardspecies" class="card-columns shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body m-7 shadow p-3 mb-5 bg-white rounded" *ngFor="let specie of species; let i = index">
+        <h5 class="card-title">{{ specie.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+            Clasificacion: {{ specie.classification }}
+        </h6>
+        <!-- Example single danger button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Mas Informacion
+    </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Designacion: {{ specie.designation }}</a>
+                <a class="dropdown-item" href="#">Altura: {{ specie.average_height }}</a>
+                <a class="dropdown-item" href="#">ColorPiel: {{ specie.skin_colors }}</a>
+                <a class="dropdown-item" href="#">Color Cabello: {{ specie.hair_colors }</a>
+                <a class="dropdown-item" href="#">Color ojos: {{specie.eye_colors}</a>
+                <a class="dropdown-item" href="#">Promedio de Vida: {{ specie.average_lifespan }}</a>
+                <a class="dropdown-item" href="#">Mundo ID: {{ specie.homeworld }}</a>
+                <a class="dropdown-item" href="#">Idioma: {{ specie.language }}</a>
+                <div class="dropdown-divider"></div>
+            </div>
+        </div>
+    </div>
+</div>
