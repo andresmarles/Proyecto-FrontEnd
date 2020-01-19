@@ -8,9 +8,9 @@ import { stringify } from 'querystring';
   templateUrl: './film.component.html',
   styles: []
 })
-export class FilmComponent{
+export class FilmComponent {
 
-  films: any[]= [];
+  films: any[] = [];
   people: any[] = [];
 
   constructor( private service: ServiceService,
@@ -25,9 +25,9 @@ export class FilmComponent{
 
   getPeople( url: string){
 
-    let id = url.substr(28,2);
-    if ( id.charAt(1) === '/' ){
-      id = id.substr(0,1);
+    let id = url.substr(28, 2);
+    if ( id.charAt(1) === '/' ) {
+      id = id.substr(0, 1);
     }
     console.log(id);
     this.service.getDirection(url)

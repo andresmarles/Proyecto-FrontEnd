@@ -14,6 +14,9 @@ import {HomeComponent} from './componentes/home/home.component';
 import { EspeciesComponent } from './componentes/especies/Especies.component';
 
 import { RUTAS } from './app.routes';
+import { StarshipsComponent } from './componentes/starships/starships.component';
+import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
+import { FooterComponent } from './shares/footer/footer.component';
 
 
 
@@ -25,7 +28,10 @@ import { RUTAS } from './app.routes';
     NavbarComponent,
     PeopleComponent,
     HomeComponent,
-    EspeciesComponent
+    EspeciesComponent,
+    StarshipsComponent,
+    VehiclesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
