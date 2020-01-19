@@ -17,6 +17,7 @@ import { RUTAS } from './app.routes';
 import { StarshipsComponent } from './componentes/starships/starships.component';
 import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
 import { FooterComponent } from './shares/footer/footer.component';
+import { StarshipComponent } from './componentes/starship/starship.component';
 
 
 
@@ -31,7 +32,8 @@ import { FooterComponent } from './shares/footer/footer.component';
     EspeciesComponent,
     StarshipsComponent,
     VehiclesComponent,
-    FooterComponent
+    FooterComponent,
+    StarshipComponent
   ],
   imports: [
     BrowserModule,

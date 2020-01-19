@@ -2,10 +2,11 @@
 
 body {
     background-color: white;
+    background-image: url( 'assets/img/bg.png' );
 }
 
 h1#Cardspeciestitle {
-    color: black;
+    color: #FFFFFF;
 }
 
 #carouselExampleIndicators {
@@ -75,4 +76,8 @@ hr {
 
 .fadeIn {
     animation-name: fadeIn;
+}
+
+.link {
+    cursor: pointer;
 }
