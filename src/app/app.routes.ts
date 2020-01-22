@@ -4,14 +4,20 @@ import { PeopleComponent } from './componentes/people/people.component';
 import { SearchComponent } from './componentes/search/search.component';
 import {HomeComponent} from './componentes/home/home.component';
 import {EspeciesComponent} from './componentes/especies/Especies.component';
+import { StarshipsComponent } from './componentes/starships/starships.component';
+import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
+import { StarshipComponent } from './componentes/starship/starship.component';
 
 export const RUTAS: Routes = [
-    { path: 'film', component: FilmComponent },
-    { path: 'people/:id', component: PeopleComponent },
-    { path: 'search',component: SearchComponent },
-    { path: 'home',component: HomeComponent },
-    { path: 'especies',component: EspeciesComponent },
-    { path: '', pathMatch: 'full', redirectTo: 'film'},
+    { path: '', pathMatch: 'full', redirectTo: 'inicio'},
+    { path: 'peliculas', component: FilmComponent },
+    { path: 'personaje/:id', component: PeopleComponent },
+    { path: 'busqueda', component: SearchComponent },
+    { path: 'inicio', component: HomeComponent },
+    { path: 'especies', component: EspeciesComponent },
+    { path: 'naves', component: StarshipsComponent },
+    { path: 'nave/:id', component: StarshipComponent },
+    { path: 'vehiculos', component: VehiclesComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'film'}
 ]
 

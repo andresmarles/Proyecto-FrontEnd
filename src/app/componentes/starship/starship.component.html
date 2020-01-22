@@ -1,0 +1,73 @@
+<div class="container-fluid" id="starship">
+    <h1 class="mt-5 text-white" *ngIf="starship">
+        {{ starship.name }}
+        <small class="text-muted"> | Nave </small>
+    </h1>
+    <h6 class="blockquote-footer">Detalles</h6>
+    <hr>
+    <div class="row" *ngIf="starship">
+        <div class="col-lg-8">
+            <a class="img-preview d-block shadow-lg rounded mb-4">
+                <img src="{{ service.getImageById( starship.url, 'starships') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ starship.name }}">
+            </a>
+            
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Modelo</h5>
+                    <hr>
+                    {{ starship.model }}
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Detalles</h5>
+                    <hr>
+                    <ul class="mb-0">
+                        <li>Manufacturer: {{ starship.manufacturer }}</li>
+                        <li>Cost in credits: {{ starship.cost_in_credits | number }}</li>
+                        <li>Length: {{ starship.length | number }}</li>
+                        <li>Max atmosphering Speed: {{ starship.max_atmosphering_speed }}</li>
+                        <li>Crew: {{ starship.crew | number }}</li>
+                        <li>Passengers: {{ starship.passengers | number }}</li>
+                        <li>Cargo capacity: {{ starship.cargo_capacity | number }}</li>
+                        <li>Consumables: {{ starship.consumables }}</li>
+                        <li>Hyperdrive rating: {{ starship.hyperdrive_rating }}</li>
+                        <li>MGLT: {{ starship.MGLT | number }}</li>
+                        <li>Starship class: {{ starship.starship_class }}</li>
+                        <li>Created: {{ starship.created | date }}</li>
+                        <li>Edited: {{ starship.edited | date }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+                
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Películas</h5>
+                    <hr>
+                    <ul *ngIf="starship.films.length > 0">
+                        <li *ngFor="let film of starship.films">
+                            {{ film }}
+                        </li>
+                    </ul>
+                    <p *ngIf="starship.films.length === 0">No hay películas relacionadas</p>
+                </div>
+            </div>
+                
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Pilotos</h5>
+                    <hr>
+                    <ul *ngIf="starship.pilots.length > 0">
+                        <li *ngFor="let pilot of starship.pilots">
+                            {{ pilot }}
+                        </li>
+                    </ul>
+                    <p *ngIf="starship.pilots.length === 0">No hay películas relacionadas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

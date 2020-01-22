@@ -8,17 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./especies.component.css']
 })
 export class EspeciesComponent implements OnInit {
-  species: any[]= [];
-  constructor( private service: ServiceService,
-    private router: Router ) { 
+  species: any[] = [];
+  constructor(
+    private service: ServiceService,
+    private router: Router ) {
       this.service.getSpecies()
       .subscribe( (data: any) => {
         console.log(data);
         console.log(data['results']);
         this.species = data;
     });
-
-     }
+  }
 
   ngOnInit() {
   }

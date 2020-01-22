@@ -18,15 +18,11 @@ export class PeopleComponent {
       });
   }
 
-  getPeople( id: string){
+  getPeople( id: string) {
     this.service.getPeople(id)
         .subscribe( (people: any) => {
           console.log(people);
           this.people = people;
-        }); 
-
+        });
   }
-
-
-
 }
