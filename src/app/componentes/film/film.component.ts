@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
-import { Router } from '@angular/router';
-import { stringify } from 'querystring';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-film',
@@ -10,17 +9,23 @@ import { stringify } from 'querystring';
 })
 export class FilmComponent {
 
-  films: any[] = [];
+  film: any[] = [];
   people: any[] = [];
 
-  constructor( private service: ServiceService,
-               private router: Router ) {
+  constructor( private router: ActivatedRoute,
+               private service: ServiceService,
+               private ruta: Router  ) { 
+      this.router.params.subscribe( params => {
+        this.getFilms( params['id'] );
+      });
+  }
+
+  getFilms (id: number) {
     this.service.getFilms()
-      .subscribe( (data: any) => {
-        console.log(data);
-        console.log(data['characters']);
-        this.films = data;
-    });
+        .subscribe( (data: any) => {
+          console.log(data[id]);
+          this.film = data[id];
+        });
   }
 
   getPeople( url: string){
@@ -36,7 +41,7 @@ export class FilmComponent {
             console.log(people.name);
             this.people = people.name;
           });
-    this.router.navigate(['/people', id])
+    this.ruta.navigate(['/personaje', id]);
   }
 
 }

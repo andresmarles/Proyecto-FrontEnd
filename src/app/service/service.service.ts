@@ -27,8 +27,11 @@ export class ServiceService {
         return data.results;
       }));
   }
-  getFilm(id: string) {
-    return this.http.get(`https://swapi.co/api/films/${id}`);
+  getFilm(termino: string) {
+    return this.http.get(`https://swapi.co/api/films/?search=${termino}`)
+      .pipe( map( (data: any) => {
+        return data.results;
+      }));
   }
 
   getPeoples() {

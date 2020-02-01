@@ -1,14 +1,3 @@
-<!-- <div class="card-columns">
-    <div class="card" *ngFor="let film of films">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ film.title }}</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-    </div>
-</div> -->
-
-
 <div class="container m-5">
     <div class="row">
         <div class="col">
@@ -24,8 +13,8 @@
                     <th>Personajes</th>
                 </tr>
 
-                <tbody>
-                    <tr *ngFor="let film of films">
+                <tbody class="text-white">
+                    <tr>
                         <td> {{ film.title }} </td>
                         <td> {{ film.episode_id }} </td>
                         <td> {{ film.opening_crawl }} </td>

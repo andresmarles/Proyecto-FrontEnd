@@ -1,0 +1,9 @@
+.card-text {
+    height: 7em;
+    overflow: hidden;
+    margin-bottom: 500 px;
+}
+
+.card-text:hover {
+    overflow: auto;
+}
