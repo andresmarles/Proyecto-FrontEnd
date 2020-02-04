@@ -19,6 +19,7 @@ import { FooterComponent } from './shares/footer/footer.component';
 import { StarshipComponent } from './componentes/starship/starship.component';
 import { SearchsComponent } from './componentes/searchs/searchs.component';
 import { FilmsComponent } from './componentes/films/films.component';
+import { VehicleComponent } from './componentes/vehicle/vehicle.component';
 
 
 
@@ -35,7 +36,8 @@ import { FilmsComponent } from './componentes/films/films.component';
     FooterComponent,
     StarshipComponent,
     SearchsComponent,
-    FilmsComponent
+    FilmsComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

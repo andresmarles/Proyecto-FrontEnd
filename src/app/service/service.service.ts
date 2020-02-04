@@ -68,6 +68,9 @@ export class ServiceService {
   getVehicles() {
     return this.http.get( environment.apiURL + 'vehicles' );
   }
+  getVehicle(id: string) {
+    return this.http.get( `${environment.apiURL}vehicles/${id}` );
+  }
   getVehiclesURL(url: string) {
     return this.http.get( url );
   }

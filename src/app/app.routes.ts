@@ -8,6 +8,7 @@ import { StarshipsComponent } from './componentes/starships/starships.component'
 import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
 import { StarshipComponent } from './componentes/starship/starship.component';
 import { SearchsComponent } from './componentes/searchs/searchs.component';
+import { VehicleComponent } from './componentes/vehicle/vehicle.component';
 
 export const RUTAS: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'inicio'},
@@ -20,6 +21,7 @@ export const RUTAS: Routes = [
     { path: 'naves', component: StarshipsComponent },
     { path: 'nave/:id', component: StarshipComponent },
     { path: 'vehiculos', component: VehiclesComponent },
+    { path: 'vehiculo/:id', component: VehicleComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'film'}
 ];
 
