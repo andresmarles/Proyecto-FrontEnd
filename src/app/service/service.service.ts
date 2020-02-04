@@ -27,8 +27,11 @@ export class ServiceService {
         return data.results;
       }));
   }
-  getFilm(id: string) {
-    return this.http.get(`https://swapi.co/api/films/${id}`);
+  getFilm(termino: string) {
+    return this.http.get(`https://swapi.co/api/films/?search=${termino}`)
+      .pipe( map( (data: any) => {
+        return data.results;
+      }));
   }
 
   getPeoples() {
@@ -65,7 +68,15 @@ export class ServiceService {
   getVehicles() {
     return this.http.get( environment.apiURL + 'vehicles' );
   }
+  getVehicle(id: string) {
+    return this.http.get( `${environment.apiURL}vehicles/${id}` );
+  }
   getVehiclesURL(url: string) {
     return this.http.get( url );
+  }
+
+  // RESPONSE DATA
+  getByEndpoint( endpoint: string ) {
+    return this.http.get( endpoint );
   }
 }

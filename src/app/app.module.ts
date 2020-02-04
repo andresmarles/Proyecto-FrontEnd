@@ -6,18 +6,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { FilmComponent } from './componentes/film/film.component';
-import { SearchComponent } from './componentes/search/search.component';
 import { NavbarComponent } from './shares/navbar/navbar.component';
 import { PeopleComponent } from './componentes/people/people.component';
 import { ServiceService } from './service/service.service';
 import {HomeComponent} from './componentes/home/home.component';
-import { EspeciesComponent } from './componentes/especies/Especies.component';
+import { EspeciesComponent } from './componentes/especies/especies.component';
 
 import { RUTAS } from './app.routes';
 import { StarshipsComponent } from './componentes/starships/starships.component';
 import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
 import { FooterComponent } from './shares/footer/footer.component';
 import { StarshipComponent } from './componentes/starship/starship.component';
+import { SearchsComponent } from './componentes/searchs/searchs.component';
+import { FilmsComponent } from './componentes/films/films.component';
+import { VehicleComponent } from './componentes/vehicle/vehicle.component';
 
 
 
@@ -25,7 +27,6 @@ import { StarshipComponent } from './componentes/starship/starship.component';
   declarations: [
     AppComponent,
     FilmComponent,
-    SearchComponent,
     NavbarComponent,
     PeopleComponent,
     HomeComponent,
@@ -33,7 +34,10 @@ import { StarshipComponent } from './componentes/starship/starship.component';
     StarshipsComponent,
     VehiclesComponent,
     FooterComponent,
-    StarshipComponent
+    StarshipComponent,
+    SearchsComponent,
+    FilmsComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

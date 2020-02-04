@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/service.service';
-import { Starship } from '../../models/starships.model';
+import { Vehicle } from '../../models/vehicles.model';
 import { Film } from '../../models/films.model';
 import { Person } from '../../models/people.model';
+import { ServiceService } from '../../service/service.service';
 import { ActivatedRoute } from '@angular/router';
 
 declare var $: any;
 
 @Component({
-  selector: 'app-starship',
-  templateUrl: './starship.component.html',
-  styleUrls: ['./starship.component.css']
+  selector: 'app-vehicle',
+  templateUrl: './vehicle.component.html',
+  styleUrls: ['./vehicle.component.css']
 })
-export class StarshipComponent implements OnInit {
+export class VehicleComponent implements OnInit {
 
-  starship: Starship;
+  vehicle: Vehicle;
   films: Array<Film> = [];
   pilots: Array<Person> = [];
 
@@ -22,18 +22,18 @@ export class StarshipComponent implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params.id;
-    this.service.getStarship( id ).subscribe( (data: Starship) => {
-      this.starship = data;
-      $('html, body').animate({scrollTop: $('#starship').position().top}, 'slow');
+    this.service.getVehicle( id ).subscribe( (data: Vehicle) => {
+      this.vehicle = data;
+      $('html, body').animate({scrollTop: $('#vehicle').position().top}, 'slow');
 
-      if ( this.starship.films.length > 0 ) {
-        for (const film of this.starship.films) {
+      if ( this.vehicle.films.length > 0 ) {
+        for (const film of this.vehicle.films) {
           this.getFilm(film);
         }
       }
 
-      if ( this.starship.pilots.length > 0 ) {
-        for (const person of this.starship.pilots) {
+      if ( this.vehicle.pilots.length > 0 ) {
+        for (const person of this.vehicle.pilots) {
           this.getPerson(person);
         }
       }

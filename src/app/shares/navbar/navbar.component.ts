@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.component.html',
   styles: []
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
   constructor() { }
 
-  ngOnInit() {
+  buscar( termino: string){
+    console.log('el termino es', termino);
   }
 
 }

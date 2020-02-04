@@ -1,0 +1,17 @@
+<div class="row m-5 container">
+    <div class="col mce-fixed-width">
+        <input #termino type="text" class="form-control" (keyup)="buscar(termino.value)" placeholder="Busca por pelicula">
+    </div>
+</div>
+
+
+<div class="card-columns my-5">
+    <div class="card" *ngFor="let resultado of resultados">
+        <img [src]=" service.getImageById( resultado.url, 'films') " onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ resultado.title }}</h5>
+            <p class="card-text">{{ resultado.opening_crawl }}</p>
+            <a (click)="getPelicula( resultado.url)" class="badge badge-primary puntero">Detalles</a>
+        </div>
+    </div>
+</div>

@@ -1,21 +1,21 @@
-<div class="container-fluid" id="starship">
-    <h1 class="mt-5 text-white" *ngIf="starship">
-        {{ starship.name }}
+<div class="container-fluid" id="vehicle">
+    <h1 class="mt-5 text-white" *ngIf="vehicle">
+        {{ vehicle.name }}
         <small class="text-muted"> | Nave </small>
     </h1>
     <h6 class="blockquote-footer">Detalles</h6>
     <hr>
-    <div class="row" *ngIf="starship">
+    <div class="row" *ngIf="vehicle">
         <div class="col-lg-8">
             <a class="img-preview d-block shadow-lg rounded mb-4">
-                <img src="{{ service.getImageById( starship.url, 'starships') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ starship.name }}">
+                <img src="{{ service.getImageById( vehicle.url, 'vehicles') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ vehicle.name }}">
             </a>
             
             <div class="card border-0 shadow mb-4">
                 <div class="card-body">
                     <h5 class="m-0">Modelo</h5>
                     <hr>
-                    {{ starship.model }}
+                    {{ vehicle.model }}
                 </div>
             </div>
             
@@ -24,19 +24,17 @@
                     <h5 class="m-0">Detalles</h5>
                     <hr>
                     <ul class="mb-0">
-                        <li>Manufacturer: {{ starship.manufacturer }}</li>
-                        <li *ngIf="starship.cost_in_credits !== 'unknown'">Cost in credits: {{ starship.cost_in_credits | number }}</li>
-                        <li>Length: {{ starship.length | number }}</li>
-                        <li>Max atmosphering Speed: {{ starship.max_atmosphering_speed }}</li>
-                        <li>Crew: {{ starship.crew | number }}</li>
-                        <li>Passengers: {{ starship.passengers | number }}</li>
-                        <li>Cargo capacity: {{ starship.cargo_capacity | number }}</li>
-                        <li>Consumables: {{ starship.consumables }}</li>
-                        <li>Hyperdrive rating: {{ starship.hyperdrive_rating }}</li>
-                        <li>MGLT: {{ starship.MGLT | number }}</li>
-                        <li>Starship class: {{ starship.starship_class }}</li>
-                        <li>Created: {{ starship.created | date }}</li>
-                        <li>Edited: {{ starship.edited | date }}</li>
+                        <li>Vehicle Class: {{ vehicle.vehicle_class }}</li>
+                        <li>Manufacturer: {{ vehicle.manufacturer }}</li>
+                        <li *ngIf="vehicle.cost_in_credits !== 'unknown'">Cost in credits: {{ vehicle.cost_in_credits | number }}</li>
+                        <li>Length: {{ vehicle.length | number }}</li>
+                        <li>Max atmosphering Speed: {{ vehicle.max_atmosphering_speed }}</li>
+                        <li>Crew: {{ vehicle.crew | number }}</li>
+                        <li>Passengers: {{ vehicle.passengers | number }}</li>
+                        <li>Cargo capacity: {{ vehicle.cargo_capacity | number }}</li>
+                        <li>Consumables: {{ vehicle.consumables }}</li>
+                        <li>Created: {{ vehicle.created | date }}</li>
+                        <li>Edited: {{ vehicle.edited | date }}</li>
                     </ul>
                 </div>
             </div>

@@ -1,1 +1,31 @@
-<p>vehicles works!</p>
+<div class="container-fluid">
+    <h1 class="mt-5 text-white">
+        Vehículos
+    </h1>
+    <h6 class="blockquote-footer">Listado de vehículos del universo de Star Wars</h6>
+    <hr>
+    <div class="row" id="vehicles" *ngIf="vehicles">
+        <div class="col-12 col-md-6 mt-3" *ngFor="let vehicle of vehicles">
+            <div class="card w-100">
+                <img src="{{ service.getImageById( vehicle.url, 'vehicles') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ vehicle.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{ vehicle.name }}
+                    </h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <a routerLink="/vehiculo/{{ service.getIdByUrl( vehicle.url ) }}" class="btn btn-primary text-white">Detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Navigation Starship" class="float-right my-5">
+        <ul class="pagination" *ngIf="vehicles">
+            <li class="page-item" [ngClass]="{ 'disabled': !previous }">
+                <a class="page-link link" (click)="getPrevious()">Anterior</a>
+            </li>
+            <li class="page-item" [ngClass]="{ 'disabled': !next }">
+                <a class="page-link link" (click)="getNext()">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>

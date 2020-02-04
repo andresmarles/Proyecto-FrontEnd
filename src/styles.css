@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-color: white;
+    background-color: #ffffff;
     background-image: url( 'assets/img/bg.png' );
 }
 
@@ -18,7 +18,7 @@ h1#Cardspeciestitle {
 }
 
 hr {
-    border-color: white;
+    border-color: #ffffff;
 }
 
 .puntero {
@@ -32,7 +32,7 @@ hr {
 
 .card-title,
 .card-text {
-    color: black;
+    color: #000000;
 }
 
 .badge {
@@ -80,4 +80,20 @@ hr {
 
 .link {
     cursor: pointer;
+}
+.boton{
+border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: #2e518b; /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+/*text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 80px; /*bordes redondos*/
+	
+}
+.boton:hover{
+	
+		background: #99ff99;
+	
 }
