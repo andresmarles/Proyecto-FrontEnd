@@ -25,7 +25,7 @@
                     <hr>
                     <ul class="mb-0">
                         <li>Manufacturer: {{ starship.manufacturer }}</li>
-                        <li>Cost in credits: {{ starship.cost_in_credits | number }}</li>
+                        <li *ngIf="starship.cost_in_credits !== 'unknown'">Cost in credits: {{ starship.cost_in_credits | number }}</li>
                         <li>Length: {{ starship.length | number }}</li>
                         <li>Max atmosphering Speed: {{ starship.max_atmosphering_speed }}</li>
                         <li>Crew: {{ starship.crew | number }}</li>
@@ -47,12 +47,12 @@
                 <div class="card-body">
                     <h5 class="m-0">Películas</h5>
                     <hr>
-                    <ul *ngIf="starship.films.length > 0">
-                        <li *ngFor="let film of starship.films">
-                            {{ film }}
+                    <ul *ngIf="films.length > 0">
+                        <li *ngFor="let film of films">
+                            {{ film.title }}
                         </li>
                     </ul>
-                    <p *ngIf="starship.films.length === 0">No hay películas relacionadas</p>
+                    <p *ngIf="films.length === 0">No hay películas relacionadas</p>
                 </div>
             </div>
                 
@@ -60,12 +60,12 @@
                 <div class="card-body">
                     <h5 class="m-0">Pilotos</h5>
                     <hr>
-                    <ul *ngIf="starship.pilots.length > 0">
-                        <li *ngFor="let pilot of starship.pilots">
-                            {{ pilot }}
+                    <ul *ngIf="pilots.length > 0">
+                        <li *ngFor="let pilot of pilots">
+                            {{ pilot.name }}
                         </li>
                     </ul>
-                    <p *ngIf="starship.pilots.length === 0">No hay películas relacionadas</p>
+                    <p *ngIf="pilots.length === 0">No hay pilotos relacionados</p>
                 </div>
             </div>
         </div>

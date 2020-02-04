@@ -10,7 +10,7 @@ import { NavbarComponent } from './shares/navbar/navbar.component';
 import { PeopleComponent } from './componentes/people/people.component';
 import { ServiceService } from './service/service.service';
 import {HomeComponent} from './componentes/home/home.component';
-import { EspeciesComponent } from './componentes/especies/Especies.component';
+import { EspeciesComponent } from './componentes/especies/especies.component';
 
 import { RUTAS } from './app.routes';
 import { StarshipsComponent } from './componentes/starships/starships.component';

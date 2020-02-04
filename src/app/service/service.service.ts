@@ -71,4 +71,9 @@ export class ServiceService {
   getVehiclesURL(url: string) {
     return this.http.get( url );
   }
+
+  // RESPONSE DATA
+  getByEndpoint( endpoint: string ) {
+    return this.http.get( endpoint );
+  }
 }

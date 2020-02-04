@@ -3,7 +3,7 @@ import { FilmComponent } from './componentes/film/film.component';
 import { FilmsComponent } from './componentes/films/films.component';
 import { PeopleComponent } from './componentes/people/people.component';
 import {HomeComponent} from './componentes/home/home.component';
-import {EspeciesComponent} from './componentes/especies/Especies.component';
+import {EspeciesComponent} from './componentes/especies/especies.component';
 import { StarshipsComponent } from './componentes/starships/starships.component';
 import { VehiclesComponent } from './componentes/vehicles/vehicles.component';
 import { StarshipComponent } from './componentes/starship/starship.component';
@@ -21,5 +21,6 @@ export const RUTAS: Routes = [
     { path: 'nave/:id', component: StarshipComponent },
     { path: 'vehiculos', component: VehiclesComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'film'}
-]
+];
+
 

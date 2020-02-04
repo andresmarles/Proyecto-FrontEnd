@@ -15,7 +15,7 @@ export class EspeciesComponent implements OnInit {
       this.service.getSpecies()
       .subscribe( (data: any) => {
         console.log(data);
-        console.log(data['results']);
+        console.log(data.results);
         this.species = data;
     });
   }
