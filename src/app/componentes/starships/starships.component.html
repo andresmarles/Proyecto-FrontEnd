@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid" id="starships">
     <h1 class="mt-5 text-white">
         Naves
     </h1>
     <h6 class="blockquote-footer">Listado de naves del universo de Star Wars</h6>
     <hr>
-    <div class="row" id="starships" *ngIf="starships">
+    <div class="row" *ngIf="starships">
         <div class="col-12 col-md-6 mt-3" *ngFor="let starship of starships">
             <div class="card w-100">
                 <img src="{{ service.getImageById( starship.url, 'starships') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ starship.name }}">

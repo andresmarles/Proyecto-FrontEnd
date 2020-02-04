@@ -1,0 +1,62 @@
+<div class="container-fluid" id="planet">
+    <h1 class="mt-5 text-white" *ngIf="planet">
+        {{ planet.name }}
+        <small class="text-muted"> | Planeta </small>
+    </h1>
+    <h6 class="blockquote-footer">Detalles</h6>
+    <hr>
+    <div class="row" *ngIf="planet">
+        <div class="col-lg-8">
+            <a class="img-preview d-block shadow-lg rounded mb-4">
+                <img src="{{ service.getImageById( planet.url, 'planets') }}" onerror="this.src='assets/img/No_picture_available.png'" class="card-img-top border" alt="{{ planet.name }}">
+            </a>
+
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Detalles</h5>
+                    <hr>
+                    <ul class="mb-0">
+                        <li>Climate: {{ planet.climate }}</li>
+                        <li>Diameter: {{ planet.diameter }}</li>
+                        <li>Gravity: {{ planet.gravity }}</li>
+                        <li>Orbital Period: {{ planet.orbital_period }}</li>
+                        <li *ngIf="planet.population !== 'unknown'">Population: {{ planet.population | number }}</li>
+                        <li>Rotation Period: {{ planet.rotation_period }}</li>
+                        <li>Surface Water: {{ planet.surface_water }}</li>
+                        <li>Terrain: {{ planet.terrain }}</li>
+                        <li>Created: {{ planet.created | date }}</li>
+                        <li>Edited: {{ planet.edited | date }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+                
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Películas</h5>
+                    <hr>
+                    <ul *ngIf="films.length > 0">
+                        <li *ngFor="let film of films">
+                            {{ film.title }}
+                        </li>
+                    </ul>
+                    <p *ngIf="films.length === 0">No hay películas relacionadas</p>
+                </div>
+            </div>
+                
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <h5 class="m-0">Residentes</h5>
+                    <hr>
+                    <ul *ngIf="residents.length > 0">
+                        <li *ngFor="let pilot of residents">
+                            {{ pilot.name }}
+                        </li>
+                    </ul>
+                    <p *ngIf="residents.length === 0">No hay residentes relacionados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

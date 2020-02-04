@@ -75,6 +75,17 @@ export class ServiceService {
     return this.http.get( url );
   }
 
+  // PLANETS
+  getPlanets() {
+    return this.http.get( environment.apiURL + 'planets' );
+  }
+  getPlanet(id: string) {
+    return this.http.get( `${environment.apiURL}planets/${id}` );
+  }
+  getPlanetsURL(url: string) {
+    return this.http.get( url );
+  }
+
   // RESPONSE DATA
   getByEndpoint( endpoint: string ) {
     return this.http.get( endpoint );

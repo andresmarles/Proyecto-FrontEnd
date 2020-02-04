@@ -20,6 +20,8 @@ import { StarshipComponent } from './componentes/starship/starship.component';
 import { SearchsComponent } from './componentes/searchs/searchs.component';
 import { FilmsComponent } from './componentes/films/films.component';
 import { VehicleComponent } from './componentes/vehicle/vehicle.component';
+import { PlanetsComponent } from './componentes/planets/planets.component';
+import { PlanetComponent } from './componentes/planet/planet.component';
 
 
 
@@ -37,7 +39,9 @@ import { VehicleComponent } from './componentes/vehicle/vehicle.component';
     StarshipComponent,
     SearchsComponent,
     FilmsComponent,
-    VehicleComponent
+    VehicleComponent,
+    PlanetsComponent,
+    PlanetComponent
   ],
   imports: [
     BrowserModule,
